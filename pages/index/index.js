@@ -8,6 +8,14 @@ Page({
     this.toMonth();
   },
   // 
+  tapday: function(e){
+    console.log(e);
+    var data = e.target.dataset;
+    wx.showToast({
+      title: data.year + "年" + data.month + "月" + data.day + "日",
+      icon: "none"
+    })
+  },
   preMonth: function () {
     this.addMonth(-1);
   },

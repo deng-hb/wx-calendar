@@ -15,7 +15,8 @@
   <view style="width:14.28%;float:left;text-align:center;color:red;">六</view>
 </view>
 <view style="width:100%;font-size:14px;" wx:for="{{month.days}}" wx:key="{{item}}">
-  <view style="width:14.28%;float:left;box-sizing:border-box;text-align:center;height:40px;line-height:40px;{{item.style}}">
+  <view bindtap='tapday' data-year='{{item.year}}' data-month='{{item.month}}' data-day='{{item.day}}' data-week='{{item.week}}'
+    style="width:14.28%;float:left;box-sizing:border-box;text-align:center;height:40px;line-height:40px;{{item.style}}">
       {{item.day}}
   </view>
 </view>
